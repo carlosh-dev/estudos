@@ -1,4 +1,4 @@
-import React { useEffect} from "react";
+import React,{ useEffect, useState } from "react";
 import {
   StyleSheet,
   Text,
@@ -12,10 +12,9 @@ import { Feather } from "@expo/vector-icons";
 import mapMarker from "../images/map-marker.png";
 import { useNavigation } from "@react-navigation/native";
 import { RectButton } from "react-native-gesture-handler";
-import { useEffect, useState } from "react";
 import api from "../services/api";
 
-// Interface para informar 
+// Interface para informar os atributos da classe
 interface Orphanage{
   id: number,
   name: string,
@@ -34,8 +33,8 @@ export default function OrphanagesMap() {
     })
   })
 
-  function handleNavigateToOrphanageDetails() {
-    navigation.navigate("OrphanageDetails");
+  function handleNavigateToOrphanageDetails(id: number) {
+    navigation.navigate("OrphanageDetails", {id});
   }
 
   function handleNavigateToCreateOrphanage() {
@@ -50,8 +49,8 @@ export default function OrphanagesMap() {
         initialRegion={{
           latitude: -23.6621956,
           longitude: -46.6608496,
-          latitudeDelta: 0.008,
-          longitudeDelta: 0.008,
+          latitudeDelta: 0.010,
+          longitudeDelta: 0.010,
         }}
       >
         {orphanages.map(orphanage => {
@@ -68,9 +67,9 @@ export default function OrphanagesMap() {
             longitude: orphanage.longitude,
           }}
         >
-          <Callout tooltip onPress={handleNavigateToOrphanageDetails}>
+          <Callout tooltip onPress={() => handleNavigateToOrphanageDetails(orphanage.id)}>
             <View style={styles.calloutContainer}>
-              <Text style={styles.calloutText}>Lar das Meninas</Text>
+              <Text style={styles.calloutText}>{orphanage.name}</Text>
             </View>
           </Callout>
         </Marker>
@@ -78,7 +77,7 @@ export default function OrphanagesMap() {
       </MapView>
 
       <View style={styles.footer}>
-        <Text style={styles.footerText}> 2 Orfanatos Encontrados</Text>
+        <Text style={styles.footerText}> {orphanages.length} Orfanatos Encontrados</Text>
 
         <RectButton
           style={styles.createOrphanageButton}
