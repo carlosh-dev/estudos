@@ -1,0 +1,2 @@
+Criando o projeto react:
+npx create-react-app web --template typescript

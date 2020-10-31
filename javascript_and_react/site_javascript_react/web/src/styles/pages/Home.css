@@ -1,0 +1,65 @@
+.planet-home {
+  height: 200px;
+}
+
+.home-content {
+  font-family: Montserrat;
+  font-style: normal;
+  margin-top: 70px;
+  margin-left: 60px;
+}
+
+.home-content .txt-1 {
+  color: #bb6bd9;
+  font-weight: 700;
+  font-size: 60px;
+}
+
+.home-content .txt-2 {
+  margin-top: 20px;
+  color: white;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 39px;
+}
+
+.home-content .txt-3 {
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 39px;
+}
+
+.link-git {
+  text-decoration: none;
+  color: white;
+  margin-top: 20px;
+  
+  background: linear-gradient(329.54deg, #9b51e0 0%, #af74e7 100%);
+
+  width: 330px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  transition: background-color 0.5s;
+}
+
+.link-git:hover {
+  
+  background: linear-gradient(329.54deg, #af74e7 0%, #9b51e0 100%);
+
+}
+
+.buttom-git .link {
+  display: flex;
+  align-items: center;
+}
+
+.link-text {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
