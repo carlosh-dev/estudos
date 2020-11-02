@@ -2,7 +2,6 @@ import React from "react";
 import Header from "../components/Header";
 import planetHome from "../images/planet-icon-home.svg";
 import { AiFillGithub } from "react-icons/ai";
-import { BsBoxArrowUpRight } from "react-icons/bs";
 import "../styles/pages/Home.css";
 
 export default function Home() {
@@ -18,9 +17,9 @@ export default function Home() {
         <h1 className="txt-1">Bem-vindo(a)!</h1>
         <h3 className="txt-2">
           Esse é um projeto pessoal <br />
-          para estudo de Javascrit e React!
+          para estudo de Javascrit e React.
         </h3>
-        <h5 className="txt-3">Aqui você pode saber um pouco sobre mim. :)</h5>
+        <h5 className="txt-3">Aqui você pode saber um pouco sobre mim :)</h5>
         <div className="buttom-git">
           <a className="link-git" href="https://github.com/carlosh-dev" target="_blank">
             <AiFillGithub size={40} color="#FFF" /> 

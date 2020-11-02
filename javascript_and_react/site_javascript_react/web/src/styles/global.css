@@ -100,6 +100,17 @@ nav,
 section {
   display: block;
 }
+
+@keyframes animation-fadein {
+  from {
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100%;
+  }
+}
+
 body {
   line-height: 1;
   background-color: black;
@@ -109,6 +120,9 @@ body {
   background-size: cover;
   background-position: center;
   padding: 40px;
+
+  animation-name: animation-fadein;
+  animation-duration: 2s;
 }
 
 ol,

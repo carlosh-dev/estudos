@@ -23,7 +23,7 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <Link to="" className="link">
+                <Link to="/about_me" className="link">
                   Sobre mim
                 </Link>
               </li>
